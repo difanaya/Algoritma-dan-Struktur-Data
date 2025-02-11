@@ -1,61 +1,66 @@
 import java.util.Scanner;
 
 public class TugasDua10 {
-    static Scanner sc = new Scanner(System.in);
-    static int pilih = 0;
+    public static void Menu() {
+        System.out.println("===================================");
+        System.out.println("Program untuk Menghitung Kubus");
+        System.out.println("===================================");
+        System.out.println("1. Hitung Volume Kubus");
+        System.out.println("2. Hitung Luas Permukaan Kubus");
+        System.out.println("3. Hitung Keliling Kubus");
+        System.out.println("4. Keluar");
+        System.out.print("Pilih menu (1-4): ");
+    }
+    public static double VolumeKubus(double sisi10) {
+        return Math.pow(sisi10, 3);
+    }
+    public static double LuasPermukaanKubus(double sisi10) {
+        return 6 * Math.pow(sisi10, 2);
+    }
+    public static double KelilingKubus(double sisi10) {
+        return 12 * sisi10;
+    }
 
     public static void main(String[] args) {
-        switch (menu()) {
-            case 1:
-                System.out.println("Menu hitung kecepatan");
-                hitungKecepatan();
-                break;
-            case 2:
-                System.out.println("Menu hitung jarak");
-                hitungJarak();
-                break;
-            case 3:
-                System.out.println("Menu hitung waktu");
-                hitungWaktu();
-                break;
-            default:
-                System.out.println("Invalid menu");
-                break;
-        }
-    }
+        Scanner Difa = new Scanner(System.in);
+        int pilihan10;
+        double sisi10;
 
-    public static int menu() {
-        System.out.println("Pilih menu : ");
-        System.out.println("1. Hitung Kecepatan");
-        System.out.println("2. Hitung Jarak");
-        System.out.println("3. Hitung Waktu");
-        System.out.println("====================");
-        System.out.print("Pilih menu (1-3) : ");
-        pilih = sc.nextInt();
-        return pilih;
-    }
+        do {
+            Menu();
+            pilihan10 = Difa.nextInt();
 
-    public static void hitungKecepatan() {
-        System.out.print("Masukkan jarak (Km) : ");
-        double jarak = sc.nextDouble();
-        System.out.print("Masukkan waktu (Jam) : ");
-        double waktu = sc.nextDouble();
-        System.out.println("Kecepatan : " + jarak / waktu + " Km/Jam");
-    }
+            if (pilihan10 >= 1 && pilihan10 <= 3) {
+                System.out.print("Masukkan panjang sisi kubus: ");
+                sisi10 = Difa.nextDouble();
+            } else if (pilihan10 == 4) {
+                System.out.println("Terima kasih! Program selesai.");
+                break;
+            } else {
+                System.out.println("Pilihan angka tidak valid. Silakan coba lagi.");
+                continue;
+            }
 
-    public static void hitungJarak() {
-        System.out.print("Masukkan kecepatan (Km) : ");
-        double kecepatan = sc.nextDouble();
-        System.out.print("Masukkan waktu (Jam) : ");
-        double waktu = sc.nextDouble();
-        System.out.println("Jarak : " + kecepatan * waktu + " Km");
-    }
+            switch (pilihan10) {
+                case 1:
+                    double volume = VolumeKubus(sisi10);
+                    System.out.printf("Volume kubus: %.2f\n", volume);
+                    break;
+                case 2:
+                    double luasPermukaan = LuasPermukaanKubus(sisi10);
+                    System.out.printf("Luas permukaan kubus: %.2f\n", luasPermukaan);
+                    break;
+                case 3:
+                    double keliling = KelilingKubus(sisi10);
+                    System.out.printf("Keliling kubus: %.2f\n", keliling);
+                    break;
+                default:
+                    System.out.println("Pilihan tidak valid.");
+            }
 
-    public static void hitungWaktu() {
-        System.out.print("Masukkan jarak (Km) : ");
-        double jarak = sc.nextDouble();
-        System.out.print("Masukkan kecepatan (Jam) : ");
-        double kecepatan = sc.nextDouble();
-        System.out.println("Waktu : " + jarak / kecepatan + " Jam");
+            System.out.println(); 
+        } while (true);
+
+        Difa.close();
     }
 }

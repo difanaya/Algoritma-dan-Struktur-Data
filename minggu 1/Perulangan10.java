@@ -2,24 +2,24 @@ import java.util.Scanner;
 
 public class Perulangan10 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String nim;
-        int n;
+        Scanner Difa = new Scanner(System.in);
+        String nim10;
+        int n10;
 
         System.out.print("Masukkan NIM: ");
-        nim = sc.nextLine();
+        nim10 = Difa.nextLine();
 
-        n = Integer.parseInt(nim.substring(nim.length() - 2));
+        n10= Integer.parseInt(nim10.substring(nim10.length()-2));
 
-        if (n < 10) {
-            n += 10;
+        if (n10 < 10) {
+            n10 += 10;
         }
 
         System.out.println("========================");
-        System.out.println("N : " + n);
+        System.out.println("N : " + n10);
         System.out.print("");
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n10; i++) {
             if (i % 2 != 0) {
                 System.out.print("* ");
             } else if (i == 6 || i == 10) {
@@ -28,5 +28,6 @@ public class Perulangan10 {
                 System.out.print(i + " ");
             }
         }
+        Difa.close();
     }
 }

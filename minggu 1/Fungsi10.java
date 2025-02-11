@@ -1,28 +1,28 @@
 public class Fungsi10 {
     
-    static int stokBunga[][] = {
+    static int stokBunga10[][] = {
             { 10, 5, 15, 7 },
             { 6, 11, 9, 12 },
             { 2, 10, 10, 5 },
             { 5, 7, 12, 9 }
     };
 
-    static int hargaBunga[] = { 75000, 50000, 60000, 10000 };
+    static int hargaBunga10[] = { 75000, 50000, 60000, 10000 };
 
     static void pendapatanCabang() {
         System.out.println("=================================================");
-        System.out.println("Pendapatan cabang RoyalGarden");
+        System.out.println("Pendapatan cabang RoyalGarden jika semua terjual");
         System.out.println("=================================================");
-        for (int i = 0; i < stokBunga.length; i++) {
-            int totalPendapatan = 0;
-            for (int j = 0; j < stokBunga[i].length; j++) {
-                totalPendapatan += stokBunga[i][j] * hargaBunga[j];
+        for (int i = 0; i < stokBunga10.length; i++) {
+            int totalPendapatan10 = 0;
+            for (int j = 0; j < stokBunga10[i].length; j++) {
+                totalPendapatan10 += stokBunga10[i][j] * hargaBunga10[j];
             }
-            System.out.println("Pendapatan cabang RoyalGarden " + (i + 1) + ": Rp " + totalPendapatan);
+            System.out.println("Pendapatan cabang RoyalGarden " + (i + 1) + ": Rp " + totalPendapatan10);
         }
     }
 
-    static String NamaBunga(int index) {
+    static String NamaBunga10(int index) {
         switch (index) {
             case 0:
                 return "Aglonema";
@@ -36,19 +36,7 @@ public class Fungsi10 {
                 return "Bunga Tidak Ada";
         }
     }
-
-    static void jumlahStockPerJenisBunga() {
-        System.out.println("=================================================");
-        System.out.println("Sisa stok bunga pada cabang RoyalGarden 4: ");
-        System.out.println("=================================================");
-        System.out.println("Stok bunga " + NamaBunga(0) + ": " + (stokBunga[3][0] - 1));
-        System.out.println("Stok bunga " + NamaBunga(1) + ": " + (stokBunga[3][1] - 2));
-        System.out.println("Stok bunga " + NamaBunga(2) + ": " + (stokBunga[3][2] - 0));
-        System.out.println("Stok bunga " + NamaBunga(3) + ": " + (stokBunga[3][3] - 5));
-    }
-
     public static void main(String[] args) {
         pendapatanCabang();
-        jumlahStockPerJenisBunga();
     }
 }
