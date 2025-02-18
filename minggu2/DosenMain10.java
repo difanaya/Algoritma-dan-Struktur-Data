@@ -11,7 +11,6 @@ public class DosenMain10 {
         dsn1.tampilInformasi();
 
         dsn1.setStatusAktif(false);
-        System.out.println("Masa kerja: " + dsn1.hitungMasaKerja(2025) + " tahun");
         dsn1.ubahKeahlian("Data Science");
         dsn1.tampilInformasi();
 
@@ -19,7 +18,6 @@ public class DosenMain10 {
         dsn2.tampilInformasi();
 
         dsn2.setStatusAktif(true);
-        System.out.println("Masa kerja: " + dsn2.hitungMasaKerja(2025) + " tahun");
         dsn2.ubahKeahlian("Manajemen Proyek TI");
         dsn2.tampilInformasi();
     }

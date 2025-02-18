@@ -23,6 +23,7 @@ public class Dosen10 {
         System.out.println("Nama: " + nama);
         System.out.println("Status Aktif: " + statusAktif);
         System.out.println("Tahun Bergabung: " + tahunBergabung);
+        System.out.println("Masa Kerja: " + hitungMasaKerja(2025) + " tahun");
         System.out.println("Bidang Keahlian: " + bidangKeahlian);
         System.out.println();
     }
