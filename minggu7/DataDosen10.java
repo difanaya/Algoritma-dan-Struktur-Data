@@ -59,14 +59,18 @@ public class DataDosen10 {
 
     public void pencarianDataSequential(String nama) {
         boolean ditemukan = false;
+        int jumlahDitemukan = 0;
         for (int i = 0; i < idx; i++) {
             if (dataDosen[i].nama.equalsIgnoreCase(nama)) {
                 dataDosen[i].tampil();
+                jumlahDitemukan++;
                 ditemukan = true;
             }
         }
         if (!ditemukan) {
             System.out.println("Data dosen dengan nama " + nama + " tidak ditemukan!");
+        } else if (jumlahDitemukan > 1) {
+            System.out.println("Peringatan: Terdapat " + jumlahDitemukan + " dosen dengan nama \"" + nama + "\"!");
         }
     }
 
@@ -74,16 +78,27 @@ public class DataDosen10 {
         SortingASC(); 
         int left = 0, right = idx - 1;
         boolean ditemukan = false;
-        
+        int jumlahDitemukan = 0;
         while (left <= right) {
-            int mid = left + (right - left) / 2;
+            int mid = (left + right) / 2;
             if (dataDosen[mid].usia == usia) {
-                ditemukan = true;
                 System.out.println("Data dosen ditemukan dengan usia: " + usia);
-                for (int i = 0; i < idx; i++) {
-                    if (dataDosen[i].usia == usia) {
-                        dataDosen[i].tampil();
-                    }
+                dataDosen[mid].tampil();
+                jumlahDitemukan++;
+                ditemukan = true;
+    
+                int i = mid - 1;
+                while (i >= 0 && dataDosen[i].usia == usia) {
+                    dataDosen[i].tampil();
+                    jumlahDitemukan++;
+                    i--;
+                }
+    
+                int j = mid + 1;
+                while (j < idx && dataDosen[j].usia == usia) {
+                    dataDosen[j].tampil();
+                    jumlahDitemukan++;
+                    j++;
                 }
                 break;
             } else if (dataDosen[mid].usia < usia) {
@@ -92,8 +107,11 @@ public class DataDosen10 {
                 right = mid - 1;
             }
         }
+
         if (!ditemukan) {
             System.out.println("Tidak ditemukan dosen dengan usia " + usia);
+        } else if (jumlahDitemukan > 1) {
+            System.out.println("Peringatan: Ditemukan " + jumlahDitemukan + " dosen dengan usia " + usia + "!");
         }
     }
 }

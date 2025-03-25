@@ -17,5 +17,6 @@ public class Dosen10 {
         System.out.printf("Nama: %s %n", nama);
         System.out.println("Jenis Kelamin: " + (jenisKelamin ? "Laki-laki" : "Perempuan"));
         System.out.printf("Usia: %d %n", usia);
+        System.out.println("-----------------------------------------");
     }
 }
