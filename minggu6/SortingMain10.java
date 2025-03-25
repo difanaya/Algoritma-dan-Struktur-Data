@@ -1,4 +1,4 @@
-package Praktikum05;
+package minggu6;
 
 public class SortingMain10 {
     public static void main(String[] args) {

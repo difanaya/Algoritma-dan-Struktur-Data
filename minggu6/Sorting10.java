@@ -1,4 +1,4 @@
-package Praktikum05;
+package minggu6;
 
 public class Sorting10 {
     int[] data;

@@ -1,4 +1,4 @@
-package Praktikum03;
+package minggu3;
 public class DataDosen10 {
 
     public static void dataSemuaDosen(Dosen10[] arrayOfDosen) {

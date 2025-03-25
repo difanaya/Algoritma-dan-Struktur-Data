@@ -1,11 +1,10 @@
-package Praktikum05;
-class Dosen10 {
+package minggu6;
+public class Dosen10 {
     String kode;
     String nama;
-    boolean jenisKelamin; // true = laki-laki, false = perempuan
+    boolean jenisKelamin;
     int usia;
 
-    // Konstruktor
     public Dosen10(String kd, String name, boolean jk, int age) {
         this.kode = kd;
         this.nama = name;
@@ -13,12 +12,10 @@ class Dosen10 {
         this.usia = age;
     }
 
-    // Menampilkan data dosen
     public void tampil() {
-        System.out.println("Kode: " + kode);
-        System.out.println("Nama: " + nama);
+        System.out.printf("Kode: %s %n", kode);
+        System.out.printf("Nama: %s %n", nama);
         System.out.println("Jenis Kelamin: " + (jenisKelamin ? "Laki-laki" : "Perempuan"));
-        System.out.println("Usia: " + usia);
-        System.out.println("-----------------------");
+        System.out.printf("Usia: %d %n", usia);
     }
 }

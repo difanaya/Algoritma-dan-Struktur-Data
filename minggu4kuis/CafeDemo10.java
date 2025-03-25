@@ -1,4 +1,4 @@
-package kuis1;
+package minggu4kuis;
 public class CafeDemo10 {
     public static void main(String[] args) {
         Cafe cafe = new Cafe("Cafe Dipsy", "Malang");

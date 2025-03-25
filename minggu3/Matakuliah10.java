@@ -1,4 +1,4 @@
-package Praktikum03;
+package minggu3;
 import java.util.Scanner;
 public class Matakuliah10 {
     public String kode;

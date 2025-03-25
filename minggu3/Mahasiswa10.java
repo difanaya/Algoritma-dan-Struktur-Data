@@ -1,4 +1,4 @@
-package Praktikum03;
+package minggu3;
 
 public class Mahasiswa10 {
     public String nim;

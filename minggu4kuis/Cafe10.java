@@ -1,4 +1,4 @@
-package kuis1;
+package minggu4kuis;
 class MenuCafeDipsy {
     String nama;
     double harga;
