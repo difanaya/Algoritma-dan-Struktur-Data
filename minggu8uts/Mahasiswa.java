@@ -1,4 +1,4 @@
-package minggu8;
+package minggu8uts;
 //Arya Bayu Samodra
 public class Mahasiswa {
     String nim;

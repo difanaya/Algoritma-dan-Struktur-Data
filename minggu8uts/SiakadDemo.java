@@ -1,4 +1,4 @@
-package minggu8;
+package minggu8uts;
 import java.util.Scanner;
 
 public class SiakadDemo {

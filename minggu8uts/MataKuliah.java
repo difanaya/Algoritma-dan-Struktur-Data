@@ -1,4 +1,4 @@
-package minggu8;
+package minggu8uts;
 //Nurfinka Lailasari
 public class MataKuliah {
     

@@ -1,4 +1,4 @@
-package minggu8;
+package minggu8uts;
 //Difa Naya Sari Pasha
 public class Penilaian { 
    
