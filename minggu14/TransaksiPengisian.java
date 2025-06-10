@@ -1,24 +1,24 @@
 package minggu14;
 //Menyimpan transaksi pengisian BBM kendaraan
 public class TransaksiPengisian {
-    Kendaraan kendaraan; //kendaraan: objek dari kelas Kendaraan (diasumsikan ada di bagian lain program).
-    BBM bbm; //bbm: objek dari kelas BBM (jenis BBM yang digunakan).
-    double liter; //liter: jumlah liter BBM yang digunakan.
-    double totalBayar; //totalBayar: total biaya yang harus dibayar (harga per liter × liter).
+    Kendaraan kendaraan; //objek
+    BBM bbm; 
+    double liter; 
+    double totalBayar; 
 
     public TransaksiPengisian(Kendaraan kendaraan, BBM bbm, double liter) {
         this.kendaraan = kendaraan;
         this.bbm = bbm;
         this.liter = liter;
-        this.totalBayar = bbm.hargaPerLiter * liter; //untuk gaya penulisan yang bersih, konsisten, dan aman, sebaiknya tetap gunakan this.totalBayar.
+        this.totalBayar = bbm.hargaPerLiter * liter; //atribut hargaPerLiter dari objek bbm.
     }
 
-    public void tampilkanDetail() { //Method untuk menampilkan informasi lengkap tentang transaksi.
+    public void tampilkanDetail() { 
         kendaraan.tampilkanInformasi();
         System.out.println("BBM: " + bbm.namaBBM + ", Harga/Liter: " + bbm.hargaPerLiter + ", Liter: " + liter + ", Total Bayar: " + totalBayar);
     }
 
-    public void tampilkanRingkas() { //Method untuk menampilkan versi ringkas transaksi: plat nomor dan total bayar.
+    public void tampilkanRingkas() { 
     System.out.println(kendaraan.platNomor + ": Rp " + totalBayar);
     }
 }
