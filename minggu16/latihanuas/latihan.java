@@ -1,4 +1,7 @@
-package uas;
+package minggu16.latihanuas;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class latihan {
     //====================================
@@ -1044,6 +1047,24 @@ public class latihan {
     //         }
     //     }
     // }
+
+    // import java.util.ArrayList;
+
+    // ArrayList<String> nama = new ArrayList<>();
+    // nama.add("Difa");
+    // nama.add("Naya");
+    // System.out.println(nama.get(0)); // "Difa"
+
+    // import java.util.TreeSet;
+
+    // TreeSet<Integer> angka = new TreeSet<>();
+    // angka.add(30);
+    // angka.add(10);
+    // angka.add(20);
+    // System.out.println(angka); // [10, 20, 30]
+
+
+
 }
 
 
